@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import Homework04 from './homeworks/homework04/Homework04';
+// import Homework05 from './homeworks/homework05/Homework05';
 import Lesson06 from './lessons/lesson06/Lesson';
 
 const root = ReactDOM.createRoot(
@@ -11,6 +13,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <>
     {/* <App /> */}
+    {/* <Homework04 /> */}
+    {/* <Homework05 /> */}
     <Lesson06 />
   </>
 );

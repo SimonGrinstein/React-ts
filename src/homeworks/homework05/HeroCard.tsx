@@ -1,6 +1,15 @@
 import "./homework05.css";
 
-function HeroCard({ key, name, isDark, age, image, weapons }) {
+interface IHeroCardProps {
+  key: number
+  isDark:boolean
+  name:string
+  image:string
+  age:number
+  weapons:string[]
+}
+
+function HeroCard({ key, name, isDark, age, image, weapons }: IHeroCardProps) {
   return (
     <article key={key} className={isDark ? "hero-dark" : "hero-light"}>
       <h3>{name}</h3>

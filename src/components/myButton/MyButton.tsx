@@ -7,12 +7,30 @@
 // * c деструктуризацией
 // * мы забираем значения из объекта по ключам и кладем в переменные с соответствующим именем в одну строчку
 
-import './myButton.css'
-// при деструктуризации пропсов мы можем задавать значение по умолчанию:
-// isDanger c false, text c 'Click'
-function MyButton({func, isDanger=true, text='Click', myType='button'}) {
-  // console.log(isDanger)
-  return <button type={myType} onClick={func} className={`my-button ${isDanger ? 'btn-danger' : 'btn-primary'}`}>{text}</button>
+import "./myButton.css";
+
+
+interface IMyButtonProps {
+  text?: string
+  isDanger?: boolean
+  myType?: "button" | "submit" | "reset"
+  func?: () => void
+}
+
+const handleDefaultClick = () => {
+  console.log("default click!");
+};
+
+function MyButton({
+  func = handleDefaultClick,
+  isDanger = true,
+  text = "Click",
+  myType = 'button' }:IMyButtonProps) {
+  return (
+    <button type={myType} onClick={func} className={`my-button ${isDanger ? "btn-danger" : "btn-primary"}`}>
+      {text}
+    </button>
+  );
 }
 
 export default MyButton;

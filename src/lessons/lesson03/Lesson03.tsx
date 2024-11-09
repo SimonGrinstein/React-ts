@@ -1,6 +1,6 @@
 import MyButton from "../../components/myButton/MyButton";
 
-function Lesson03() {
+export default function Lesson03() {
     const handlClick = () => {
         console.log('Click!')
     }
@@ -26,6 +26,3 @@ function Lesson03() {
     )
 
 }
-
-export default Lesson03;
-

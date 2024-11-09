@@ -1,7 +1,8 @@
 import { heroes } from "./data.js";
-import HeroCard from "./HeroCard.jsx";
+import HeroCard from "./HeroCard";
 
-function HeroGallery() {
+
+export default function HeroGallery() {
   return (
     <section className="grid-container">
       {heroes.map((hero) => (
@@ -18,4 +19,3 @@ function HeroGallery() {
   );
 }
 
-export default HeroGallery;

@@ -3,7 +3,7 @@ import { useState } from "react";
 import MyButton from "../../components/myButton/MyButton";
 import "./lesson04.css";
 
-function Lesson04() {
+export default function Lesson04() {
   // * изменение обычных переменных в React не приведет к обновлению компонента 🫤
 
   // let count = 0;
@@ -107,5 +107,3 @@ function Lesson04() {
     </div>
   );
 }
-
-export default Lesson04;

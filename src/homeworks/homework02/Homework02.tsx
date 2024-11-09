@@ -8,12 +8,10 @@ function tick() {
   return element;
 }
 
-
-function Homework02() {
+export default function Homework02() {
   return (
     <div>
       <header className="hw2-header">HW 2</header>
-
       <main>
         {tick()}
         <Card />
@@ -23,5 +21,3 @@ function Homework02() {
     </div>
   );
 }
-
-export default Homework02;

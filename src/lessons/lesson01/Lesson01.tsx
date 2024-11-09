@@ -1,7 +1,7 @@
 import './lesson01.css';
 // import myImage from '../img/sg.jpg';
 
-function App() {
+export default function Lesson01() {
   return (
     <div className="App">
       <header className="App-header">Simon Grinstein</header>
@@ -19,5 +19,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

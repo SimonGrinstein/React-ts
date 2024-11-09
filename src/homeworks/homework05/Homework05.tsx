@@ -1,6 +1,7 @@
-import HeroGallery from "./HeroGallery.jsx";
+import HeroGallery from "./HeroGallery";
 
-function Homework05() {
+
+export default function Homework05() {
   return (
     <div className="lesson-container">
       <h2>HW 05</h2>
@@ -8,5 +9,3 @@ function Homework05() {
     </div>
   );
 }
-
-export default Homework05;

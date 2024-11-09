@@ -1,7 +1,7 @@
 import MyButton from "../myButton/MyButton";
 import MyInput from "../myInput/MyInput";
 
-function LoginForm() {
+export default function LoginForm() {
   return (
     <form action="" method="get">
         <MyInput name={'name'} type={'text'} label={'Login'} placeholder={'Nickname'} isRequired={true}/>
@@ -11,5 +11,3 @@ function LoginForm() {
     </form>
   );
 }
-
-export default LoginForm;

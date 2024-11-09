@@ -1,9 +1,9 @@
 // импорт хука useState()
 import { useState } from "react";
-import MyButton from "../../components/myButton/MyButton";
+import MyButton from "../myButton/MyButton";
 import "./feedback.css";
 
-function Feedback() {
+export default function Feedback() {
  
   const [like, setLike] = useState(0);
   const [dislike, setDislike] = useState(0);
@@ -44,5 +44,3 @@ function Feedback() {
     </div>
   );
 }
-
-export default Feedback;

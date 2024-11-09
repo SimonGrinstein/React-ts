@@ -9,7 +9,7 @@ interface IHeroCardProps {
   weapons:string[]
 }
 
-function HeroCard({ key, name, isDark, age, image, weapons }: IHeroCardProps) {
+export default function HeroCard({ key, name, isDark, age, image, weapons }: IHeroCardProps) {
   return (
     <article key={key} className={isDark ? "hero-dark" : "hero-light"}>
       <h3>{name}</h3>
@@ -24,5 +24,3 @@ function HeroCard({ key, name, isDark, age, image, weapons }: IHeroCardProps) {
     </article>
   );
 }
-
-export default HeroCard;

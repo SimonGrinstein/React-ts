@@ -3,20 +3,27 @@ import MyButton from '../../components/myButton/MyButton'
 import './lesson02.css'
 // функция-компонент должна называться с большой буквы
 // имя файла тоже называется с большой буквы и совпадает с именем функции
-function Lesson02() {
+export default function Lesson02() {
   const element = <p>Element in variable</p>
   const text = "Text for JSX tag"
   const company = "Facebook"
+
+  type user = {
+    firstName: string
+    lastname: string
+  }
+
   const user = {
     firstName: 'Brendan',
     lastname: 'Eich'
   }
+
   const isLoggedIn = false;
 
-  function formatUser(name){
+  function formatUser(name: user){
     return name.firstName + ' ' + name.lastname
   }
-
+  
   return (
     <div className="lesson-container">
       <h1>Lesson 02</h1>
@@ -36,6 +43,3 @@ function Lesson02() {
     </div>
   );
 }
-
-// не забываем сделать export для связи с другими компонентами
-export default Lesson02;

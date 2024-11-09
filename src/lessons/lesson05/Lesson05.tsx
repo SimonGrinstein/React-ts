@@ -1,7 +1,7 @@
 import { heroes } from "./data";
 import "./lesson05.css";
 
-function Lesson05() {
+export default function Lesson05() {
   console.log(heroes);
   return (
     <div className="lesson-container">
@@ -28,5 +28,3 @@ function Lesson05() {
     </div>
   );
 }
-
-export default Lesson05;

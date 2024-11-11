@@ -9,7 +9,8 @@
 
 import "./myButton.css";
 
-
+// описали интерфейс для пропсов IMyButtonProps
+// поскольку у нас указаны значения по умолчанию мы можем поставить вопрос перед свойством сделав его не обязательным для передачи
 interface IMyButtonProps {
   text?: string
   isDanger?: boolean
@@ -21,6 +22,7 @@ const handleDefaultClick = () => {
   console.log("default click!");
 };
 
+// интерфейс указываем в круглых скобках после деструктуризации props после двоеточия
 function MyButton({
   func = handleDefaultClick,
   isDanger = true,

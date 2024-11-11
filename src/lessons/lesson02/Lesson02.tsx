@@ -1,45 +1,58 @@
-import reactImg from '../../assets/react.jpg'
-import MyButton from '../../components/myButton/MyButton'
-import './lesson02.css'
+// импортируем картинку в переменной указав полный путь
+import reactImg from '../../assets/reactImg.jpg';
+import MyButton from "../../components/myButton/MyButton";
+// подключение css файла из текущей папки
+import './lesson02.css';
 // функция-компонент должна называться с большой буквы
 // имя файла тоже называется с большой буквы и совпадает с именем функции
-export default function Lesson02() {
-  const element = <p>Element in variable</p>
-  const text = "Text for JSX tag"
-  const company = "Facebook"
+function Lesson02():JSX.Element {
+  // мы можем создать переменную с версткой и положить в нее тег li
+  const element = <li>Element in variable</li>;
+  // или мы можем создать переменную со строкой для тега в верстке
+  const text = "Text for JSX tag";
+  const company = "Facebook";
 
-  type user = {
-    firstName: string
-    lastname: string
+  interface IUser {
+    firstName: string;
+    lastname: string;
   }
 
-  const user = {
+  // объект с данными о пользователе
+  const user: IUser = {
     firstName: 'Brendan',
     lastname: 'Eich'
+  };
+
+  // функция, обрабатывающая данные объекта
+  function formatUser(name: IUser) {
+    return name.firstName + ' ' + name.lastname;
   }
 
+  // переменная от значения которой зависит отображение данных
+  // на странице в тернарном операторе
   const isLoggedIn = false;
 
-  function formatUser(name: user){
-    return name.firstName + ' ' + name.lastname
-  }
-  
+
   return (
     <div className="lesson-container">
-      <h1>Lesson 02</h1>
+      <h3>Lesson 02</h3>
       <p>React JSX components</p>
-
-      <img className='react-img' src={reactImg} alt="reactImg" />
-
+      {/* для отображения такой переменной мы пишем ее в фигурных скобках */}
+      <img className="react-img" src={reactImg} alt="reactImg" />
       <ul>
         <li>Simple text</li>
         {element}
         <li>{text}</li>
         <li>React was created by {company}</li>
         <li>{formatUser(user)} is creator of JS</li>
+        {/* пример использования тернарного оператора внутри тега */}
         <li>User {isLoggedIn ? 'is' : 'is NOT'} in the system</li>
       </ul>
-      <MyButton/>
+      {/* импорт компонента-кнопки */}
+      <MyButton />
     </div>
   );
 }
+
+// не забываем сделать export для связи с другими компонентами
+export default Lesson02;

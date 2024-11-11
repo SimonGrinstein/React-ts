@@ -1,21 +1,12 @@
-import './lesson01.css';
-// import myImage from '../img/sg.jpg';
+import "./lesson01.css";
 
-export default function Lesson01() {
+function Lesson01():JSX.Element {
+  // console.log('render lesson 1!')
   return (
     <div className="App">
-      <header className="App-header">Simon Grinstein</header>
-      <main>
-        <div><img className="sg" src="http://www.grinstein.de/images/page3_img1.jpg" alt="sg" /></div>
-        {/* <img className="sg" src={myImage} alt="sg" /> */}
-        
-        <h4 className="App-h4">Hobbys</h4>
-        <div>
-          <li>Badminton</li>
-          <li>Snooker</li>
-          <li>Kino</li>
-        </div>
-      </main>
+      <h1>Hello, React ⚛️</h1>
     </div>
   );
 }
+
+export default Lesson01;

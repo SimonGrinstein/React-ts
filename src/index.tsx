@@ -13,6 +13,7 @@ import Homework03 from './homeworks/homework03/Homework03';
 import Homework04 from './homeworks/homework04/Homework04';
 import Homework05 from './homeworks/homework05/Homework05';
 import Lesson08 from './lessons/lesson08/Lesson08';
+import Homework08 from './homeworks/homework08/Homework08';
 // import Homework06 from './homeworks/homework06/Homework';
 
 const root = ReactDOM.createRoot(
@@ -27,11 +28,12 @@ root.render(
     {/* <Lesson05 /> */}
     {/* '<Lesson06 />' */}
     {/* <Lesson07 /> */}
-    <Lesson08 />
+    {/* <Lesson08 /> */}
 
     {/* <Homework02 /> */}
     {/* <Homework03 /> */}
     {/* <Homework04 /> */}
     {/* <Homework05 /> */}
+    <Homework08 />
   </>
 );

@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import MyButton from "../myButton/MyButton";
+import Loader from "../loader/Loader";
 
 
 interface IImgData {
   image: string;
-  link: string;
 }
+
+const fetchLink: string = 'https://randomfox.ca/floof/';
 
 export default function FetchImg(): JSX.Element {
 
   const [randomImg, setImg] = useState<string>('');
-
+  //const [loading, setLoading()] = false;
   // функция обновляющая state
   const fetchImg = (): void => {
-    fetch('https://randomfox.ca/floof/')
+    fetch(fetchLink)
       .then(res => res.json())
       .then((data: IImgData): void => {
         setImg(data.image);
@@ -32,9 +34,12 @@ export default function FetchImg(): JSX.Element {
         <>
           <h3>Fetch IMG</h3>
           <img height={200} src={randomImg} alt="" />
+
           <MyButton func={fetchImg} text={'update IMG'} />
+          
         </>
       )}
+      {/* <Loader /> */}
     </div>
   );
 }

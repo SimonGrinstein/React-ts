@@ -1,0 +1,10 @@
+.desc {
+    font-style: italic;
+    color: rgb(58, 81, 196);
+    align-content: center;
+    padding: 30px;
+}
+
+.boldText {
+    font-weight: bold;
+}

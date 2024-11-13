@@ -1,22 +1,23 @@
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import Lesson01 from './lessons/lesson01/Lesson01';
-import Lesson02 from './lessons/lesson02/Lesson02';
-import Lesson03 from './lessons/lesson03/Lesson03';
-import Lesson04 from './lessons/lesson04/Lesson04';
-import Lesson05 from './lessons/lesson05/Lesson05';
-
-import Lesson07 from './lessons/lesson07/Lesson07';
-import Homework02 from './homeworks/homework02/Homework02';
-import Homework03 from './homeworks/homework03/Homework03';
-import Homework04 from './homeworks/homework04/Homework04';
-import Homework05 from './homeworks/homework05/Homework05';
-import Lesson08 from './lessons/lesson08/Lesson08';
-import Homework08 from './homeworks/homework08/Homework08';
-import Lesson09 from './lessons/lesson09/Lesson09';
-import FetchFox from './components/fetchFox/FetchFox';
+// import Lesson01 from './lessons/lesson01/Lesson01';
+// import Lesson02 from './lessons/lesson02/Lesson02';
+// import Lesson03 from './lessons/lesson03/Lesson03';
+// import Lesson04 from './lessons/lesson04/Lesson04';
+// import Lesson05 from './lessons/lesson05/Lesson05';
+// import Lesson07 from './lessons/lesson07/Lesson07';
+// import Homework02 from './homeworks/homework02/Homework02';
+// import Homework03 from './homeworks/homework03/Homework03';
+// import Homework04 from './homeworks/homework04/Homework04';
+// import Homework05 from './homeworks/homework05/Homework05';
+// import Lesson08 from './lessons/lesson08/Lesson08';
+// import Homework08 from './homeworks/homework08/Homework08';
+// import Lesson09 from './lessons/lesson09/Lesson09';
+// import FetchFox from './components/fetchFox/FetchFox';
 // import Homework06 from './homeworks/homework06/Homework';
+
+import Lesson10 from './lessons/lesson10/Lesson10';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -37,7 +38,8 @@ root.render(
     {/* <Homework04 /> */}
     {/* <Homework05 /> */}
     {/* <Homework08 /> */}
-    <FetchFox />
+    
     {/* <Lesson09 /> */}
+    <Lesson10 />
   </>
 );

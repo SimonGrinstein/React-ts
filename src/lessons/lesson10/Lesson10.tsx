@@ -50,9 +50,13 @@ export default function Lesson10(): JSX.Element {
   //console.log(catFactsArr);
 
   return (
+    <>
     <div className="lesson-container">
       <h2 className={cn(styles.desc, styles.boldText)}>Cat Facts</h2>
       <MyButton text="GET MORE INFO" func={handleGetNewCatFact} isDanger={false} />
+    </div>
+
+    <div className={cn(styles.lesson10Value)}>
       {isStart ? <h3>If you want a fact about cats, click the button above!</h3> : 
         (loading ? <Loader /> : (
           <>
@@ -60,13 +64,17 @@ export default function Lesson10(): JSX.Element {
             {catFactsArr.map((a, i) => (
               <p key={i}>{i+1}: {a}</p>
             ))}
+            
           </p>
+          <p className={cn(styles.desc)}>
           <MyButton text="DELETE ALL DATA" func={handleClearAllData} isDanger={true} />
+          </p>
           </>
           )
       )}
-      
     </div>
+
+    </>
   );
 }
 

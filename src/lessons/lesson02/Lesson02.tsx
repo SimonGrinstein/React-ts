@@ -1,5 +1,5 @@
 // импортируем картинку в переменной указав полный путь
-import reactImg from '../../assets/reactImg.jpg';
+import reactImg from '../../assets/react.jpg';
 import MyButton from "../../components/myButton/MyButton";
 // подключение css файла из текущей папки
 import './lesson02.css';

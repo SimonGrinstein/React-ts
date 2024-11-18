@@ -30,7 +30,7 @@ export default function HomePage() {
         <Link to='homework06'><div>HW 06</div></Link>
         <Link to='homework08'><div>HW 08</div></Link>
         <Link to='homework12'><div>HW 12</div></Link>
-
+        <Link to='homework13'><div>HW 13</div></Link>
     </div>
 
 

@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import { useState } from "react";
 import styles from './formGender.module.css';
+import * as Yup from "yup";
 
 interface IFormData {
   name: string;
@@ -12,6 +13,16 @@ interface IGenderData {
   gender: string,
   probability: number;
 }
+
+const schema = Yup.object().shape({
+  name: Yup
+    .string()
+    .required('name is required')
+    .min(2, 'name is more than 2')
+    .max(20, 'less than 20 symbols!')
+});
+
+
 
 export default function GenderForm() {
 
@@ -33,6 +44,8 @@ export default function GenderForm() {
     initialValues: {
       name: ""
     } as IFormData,
+    validateOnChange: false,
+    validationSchema: schema,
     onSubmit: (values: IFormData, { resetForm }) => {
       resetForm();
       fetchGender(values.name);
@@ -47,12 +60,14 @@ export default function GenderForm() {
       
       <form className={styles.genderForm} onSubmit={formik.handleSubmit}>
         <input placeholder="type your name" onChange={formik.handleChange} value={formik.values.name} name="name" type="text" />
+        <span className={styles.error}>{formik.errors.name}</span>
         <button type="submit">send request</button>
       </form>
 
       {genderData.name && (
         <p>{genderData.name} is {genderData.gender === 'male' ? '💁‍♂️' : '💁‍♀️'} {genderData.probability * 100}%</p>
       )}
+      
     </div>
   );
 }

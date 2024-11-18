@@ -19,14 +19,14 @@ import Lesson11 from './lessons/lesson11/Lesson11';
 import Lesson12 from './lessons/lesson12/Lesson12';
 import Lesson13 from './lessons/lesson13/Lesson13';
 
-import Homework08 from './homeworks/homework08/Homework08';
-import Homework12 from './homeworks/homework12/Homework12';
 import Homework02 from './homeworks/homework02/Homework02';
 import Homework03 from './homeworks/homework03/Homework03';
 import Homework04 from './homeworks/homework04/Homework04';
 import Homework05 from './homeworks/homework05/Homework05';
 import Homework06 from './homeworks/homework06/Homework06';
-
+import Homework08 from './homeworks/homework08/Homework08';
+import Homework12 from './homeworks/homework12/Homework12';
+import Homework13 from './homeworks/homework13/Homework13';
 
 
 const root = ReactDOM.createRoot(
@@ -62,6 +62,7 @@ root.render(
         <Route path="homework06" element={<Homework06 />} />
         <Route path="homework08" element={<Homework08 />} />
         <Route path="homework12" element={<Homework12 />} />
+        <Route path="homework13" element={<Homework13 />} />
       </Route>
     </Routes>
   </HashRouter>

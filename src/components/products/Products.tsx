@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
-import { useCart } from "../../context/cartContext";
 import { IProduct } from "../../types/types";
 import styles from './products.module.css';
-import MyButton from "../myButton/MyButton";
 import ShopProduct from "../shopProduct/ShopProduct";
 import Cart from '../cart/Cart';
 

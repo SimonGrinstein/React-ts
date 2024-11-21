@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { IProduct } from "../../types/types";
+import styles from "./productPage.module.css";
+import { useCart } from "../../context/cartContext";
+import MyButton from "../myButton/MyButton";
 
 export default function ProductPage() {
   const { id } = useParams();
@@ -29,11 +32,21 @@ export default function ProductPage() {
     getProduct(id as string);
   }, [id]);
 
+  const { addToCart, cart } = useCart();
+
+  // const addToCartFromProduct = () => {
+  //   addToCart({ id, product.price, product.title, quantity: 1 });
+  // };
+
+  //console.log(product.title);
+
   return (
-    <div className='lesson-container'>
+    <div className={styles.product}>
       <h3>{product.title}</h3>
       <p>{product.description}</p>
-      <img width={200} src={product.image} alt="" />
+      <img width={180} src={product.image} alt="" />
+      <p>{product.price} €</p>
+      {/* <MyButton func={addToCartFromProduct} text="add to cart" isDanger={false} /> */}
       <Link to={'../products'}>back to products</Link>
     </div>
   );

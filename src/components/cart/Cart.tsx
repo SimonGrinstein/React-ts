@@ -12,12 +12,12 @@ export default function Cart() {
       <ul>
         {cart.map(el => (
           <li key={el.id}>{el.title} quantity: {el.quantity}
-            <MyButton text="delete" func={() => removeFromCart(el.id)} /></li>
+            <MyButton  text="delete" func={() => removeFromCart(el.id)} /></li>
         ))}
 
       </ul>
       <div>
-      <MyButton isDanger={false} text="clear cart" func={() => clearCart()} />
+        <MyButton isDanger={false} text="clear cart" func={() => clearCart()} />
       </div>
     </div>
   );

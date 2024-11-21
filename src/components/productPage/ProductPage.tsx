@@ -34,9 +34,9 @@ export default function ProductPage() {
 
   const { addToCart, cart } = useCart();
 
-  // const addToCartFromProduct = () => {
-  //   addToCart({ id, product.price, product.title, quantity: 1 });
-  // };
+  const addToCartFromProduct = () => {
+    addToCart({ id:product.id, price:product.price, title:product.title, quantity: 1 });
+  };
 
   //console.log(product.title);
 
@@ -46,7 +46,7 @@ export default function ProductPage() {
       <p>{product.description}</p>
       <img width={180} src={product.image} alt="" />
       <p>{product.price} €</p>
-      {/* <MyButton func={addToCartFromProduct} text="add to cart" isDanger={false} /> */}
+      <MyButton func={addToCartFromProduct} text="add to cart" isDanger={false} />
       <Link to={'../products'}>back to products</Link>
     </div>
   );

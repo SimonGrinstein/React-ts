@@ -21,6 +21,8 @@ import Lesson12 from "./lessons/lesson12/Lesson12";
 import Lesson13 from "./lessons/lesson13/Lesson13";
 import Lesson14 from "./lessons/lesson14/Lesson14";
 import Lesson15 from "./lessons/lesson15/Lesson15";
+import Lesson16 from "./lessons/lesson16/Lesson16";
+import Store from "./lessons/lesson16/components/store/Store";
 
 import Homework02 from "./homeworks/homework02/Homework02";
 import Homework03 from "./homeworks/homework03/Homework03";
@@ -35,6 +37,8 @@ import Products from "./components/products/Products";
 import NoPage from "./components/noPage/NoPage";
 import { CartProvider } from "./context/cartContext";
 import Cart from "./components/cart/Cart";
+import StorePage from "./lessons/lesson16/components/storePage/StorePage";
+
 
 
 const root = ReactDOM.createRoot(
@@ -69,6 +73,9 @@ root.render(
           <Route path="lesson13" element={<Lesson13 />} />
           <Route path="lesson14" element={<Lesson14 />} />
           <Route path="lesson15" element={<Lesson15 />} />
+          <Route path="lesson16" element={<Lesson16 />} />
+          <Route path="store" element={<Store />}></Route>
+          <Route path="store/:id" element={<StorePage />}></Route>
 
           <Route path="homework02" element={<Homework02 />} />
           <Route path="homework03" element={<Homework03 />} />

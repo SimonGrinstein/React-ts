@@ -14,7 +14,7 @@ export default function HomePage() {
     <>
     <div className={styles.gridLessonContainer}>
       
-        {Array.from({ length: 15 }, (_, index) => index + 1).map((lessonNumber) => (
+        {Array.from({ length: 16 }, (_, index) => index + 1).map((lessonNumber) => (
         <Link to={`lesson${lessonNumber}`}><div>Lesson {lessonNumber}</div></Link>
       ))}
     
